@@ -1,4 +1,37 @@
 <!-- ProjectGrid.vm: Start -->
+
+<script type="text/javascript">
+  $(function(){
+      $('#parameterCheck').dialog({
+      autoOpen:false,
+      modal:true,
+      title:'$translations.Translate("Project Parameters")',
+      width:400,
+      height:300,
+      overlay:{
+      opacity:0.5,
+      background:'black'
+      }
+      });
+      #if ($wholeFarm)
+      var sortList = [[0,0],[1,0]];
+      #else
+      var sortList = [[0,0]];
+      #end
+      $('#StatusGrid').initialiseProjectGrid({
+        sortList:sortList
+      });
+  });
+  
+  function reload()
+  {
+	window.location = window.location.href;
+  }
+</script>
+<div id="parameterCheck" style="display:none;">
+  <div id="parameterEditor">$translations.Translate("Loading parameters, please wait...")</div>
+</div>
+
 #if ($forceBuildMessage.Length > 0)
 <div class="message success">
   <span>$forceBuildMessage</span>
@@ -13,7 +46,7 @@
   #end
     <span class="title">Projects</span>
     <span class="title-data">
-      <a href="javascript:location.reload(true)" class="refresh-button icon icon-refresh"><span>Refresh</span></a>
+      <a href="#" class="refresh-button icon icon-refresh" onclick="reload()"><span>Refresh</span></a>
     </span>
   </h1>
   
@@ -99,7 +132,11 @@
                 <input type="hidden" name="projectName" value="$projectGridRow.Name" />
                 <input type="hidden" name="serverName" value="$projectGridRow.ServerName" />
                 #if ($projectGridRow.allowForceBuild)
-                  <input type="submit" name="$projectGridRow.ForceAbortBuildButtonName" value="$projectGridRow.ForceAbortBuildButtonValue"/>
+					#if($projectGridRow.ForceAbortBuildButtonValue == "Force")
+						<input type="submit" name="$projectGridRow.ForceAbortBuildButtonName" value="$projectGridRow.ForceAbortBuildButtonValue" onclick="checkForParams(this, '$projectGridRow.ParametersUrl'); return false;" />
+					#else
+						<input type="submit" name="$projectGridRow.ForceAbortBuildButtonName" value="$projectGridRow.ForceAbortBuildButtonValue" />
+					#end
                 #end
                 #if ($projectGridRow.AllowStartStopBuild)				
                   <input type="submit" name="$projectGridRow.StartStopButtonName" value="$projectGridRow.StartStopButtonValue"/>

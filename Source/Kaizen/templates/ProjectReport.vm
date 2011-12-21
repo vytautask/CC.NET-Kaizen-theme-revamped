@@ -96,7 +96,11 @@
         <td colspan="2">
           <form methd="POST">
             #if ($server.AllowForceBuild)
-              <input type="submit" name="$ForceAbortBuildButtonName" value="$ForceAbortBuildButtonValue"  onclick="checkForParams(this, '$ParametersUrl'); return false;"/>
+				#if($ForceAbortBuildButtonValue == "Force")
+					<input type="submit" name="$ForceAbortBuildButtonName" value="$ForceAbortBuildButtonValue" onclick="checkForParams(this, '$ParametersUrl'); return false;"/>
+				#else
+					<input type="submit" name="$ForceAbortBuildButtonName" value="$ForceAbortBuildButtonValue"/>
+				#end
             #end
             #if ($server.AllowStartStopBuild)
               <input type="submit" name="$StartStopButtonName" value="$StartStopButtonValue"/>

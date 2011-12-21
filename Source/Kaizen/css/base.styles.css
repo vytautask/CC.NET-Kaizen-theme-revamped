@@ -106,7 +106,7 @@ INPUT.invalid { background-color: #ce2a1b; }
 
 /* Header
 ----------------------------------*/
-.header-logo { float: left; color: #3b3a3a; }
+.header-logo { float: left; color: #3b3a3a; cursor: pointer; }
 .heading { float: left; font: 30px times new roman; letter-spacing: 2px; }
 .subheading { float: left; clear: both; margin-top: -7px; margin-left: 30px; color: #3b3a3a; font: 12px trebuchet ms; }
 

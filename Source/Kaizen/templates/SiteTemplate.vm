@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-  <title>Continuous Integration - CruiseControl.NET</title>
+  <title>SoftDent CruiseControl.NET</title>
 
   <link type="text/css" rel="stylesheet" href="$applicationPath/Themes/Kaizen/css/base.styles.css" media="screen, projection" title="Default" />
   <link type="text/css" rel="stylesheet" href="$applicationPath/Themes/Kaizen/css/jquery.ui.css" media="screen, projection" />
@@ -18,8 +18,8 @@
 </head>
 <body>
   <div id="header">
-    <div class="header-logo">
-      <span class="heading">Continuous Integration</span>
+    <div class="header-logo" onclick="window.location.href = '$applicationPath';">
+      <span class="heading">UAB "SoftDent"</span>
       <span class="subheading">Cruise Control.NET</span>
     </div>
     $loginView
@@ -77,14 +77,6 @@
   <div id="footer" class="clear">
     <div class="version">
       <span>version $dashboardversion</span>
-    </div>
-    <div class="authors">
-      <a href="http://www.saiku.eu" class="saiku" alt="Theme designed by Saiku">
-        <span>Theme designed by Saiku</span>
-      </a>
-      <a href="http://www.thoughtworks.com" class="thought-works" alt="Development supported by ThoughtWorks">
-        <span>Development supported by ThoughtWorks</span>
-      </a>
     </div>
   </div>
   <div id="help-shortcuts" class="dialog">
