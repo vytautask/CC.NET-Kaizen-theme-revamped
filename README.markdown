@@ -1,4 +1,4 @@
-Info
+﻿Info
 --
 
 Alternative theme for CruiseControl.NET
@@ -11,7 +11,7 @@ This one is different from original Marek's theme that it lets you specify param
 License
 --
 
-Copyright 2009-2011 Marek Tihkan and Vytautas Kasparavi�ius
+Copyright 2009-2011 Marek Tihkan and Vytautas Kasparavičius
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
