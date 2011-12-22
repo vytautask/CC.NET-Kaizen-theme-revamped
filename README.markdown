@@ -5,7 +5,7 @@ Alternative theme for CruiseControl.NET
 
 [Wiki (Installation)](https://github.com/vytautask/CC.NET-Kaizen-theme-revamped/wiki)
 
-This one is different from original Marek's theme that it lets you specify parameters when building a projec, also some design fixes were made.
+This one is different from original Marek's theme that it lets you specify parameters when building a project, also some design fixes were made.
 
 
 License
